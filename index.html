@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulir Pembuatan KTP</title>
+	<link rel="stylesheet" type="text/css" href="ktp.css">
+	<script type="text/javascript" src="ktp.js" defer></script>
+</head>
+<body>
+	<section class="input">
+		<div class=""></div>
+		<div class="judul">
+			<P class="judul">Masukkan Data Diri Anda Dengan Benar !</P>
+		</div>
+		<div>
+			<label class="label" for="nik" >NIK</label>
+			<input class="nik" type="number" name="nik" id="nik">
+		</div>
+		<div>
+			<label class="label" for="nama">Nama</label>
+			<input class="nama" type="text" name="nama" id="nama">
+		</div>
+		<div>
+			<label class="label" for="tempat">Tempat/Tgl Lahir</label>
+			<input class="tempat" type="text" name="ttl" id="tempat">
+		</div>
+		<div>
+			<label class="label" for="jk">Jenis Kelamin</label>
+			<input class="jenisKelamin" id="jk" type='radio' name='jenis_kelamin' value='LAKI-LAKI' />LAKI-LAKI
+		    <input class="jenisKelamin" id="jk" type='radio' name='jenis_kelamin' value='PEREMPUAN' />PEREMPUAN
+		<div>
+			<label class="label" for="darah">Golongan Darah</label>
+			<select class="darah" name="darah" id="darah">
+				<option value=''>Pilih Golongan Darah</option>
+				<option value='O'>O</option>
+				<option value='A'>A</option>
+				<option value='B'>B</option>
+				<option value='AB'>AB</option>
+			</select>
+		</div>
+		<div>
+			<label class="table" for="alamat">Alamat</label>
+			<input class="alamat" type="text" name="alamat" id="alamat">
+		</div>
+		<div>
+			<label class="label" for="rt">RT/RW</label>
+			<input class="rt" type="text" name="rt" id="rtRw1">
+		</div>
+		<div>
+			<label class="table" for="desa" >Kel/Desa</label>
+			<input class="desa" type="text" name="desa" id="desa">
+		</div>
+		<div>
+			<label class="table" for="kecamatan" >Kecamatan</label>
+			<input class="kecamatan" type="text" name="desa" id="kecamatan">
+		</div>
+		<div>	
+			<label class="table" for="pekerjaan">Pekerjaan</label>
+			<input class="pekerjaan "type="text" name="pekerjaan" id="pekerjaan">
+		</div>
+		<div>
+			<label class="table" for="kewarganegaraan">Kewarganegaraan</label>
+			<input class="kewarganegaraan" id="wni" value="WNI" type="checkbox" name="wna">WNI
+			<input class="kewarganegaraan" type="checkbox" id="wna" value="WNA" name="wni">WNA
+		</div>
+			<button id="button" type="button" onclick="ktp()">SUBMIT</button>
+		
+	</section>
+		
+	<section class="output">
+		<div class="container">
+			<div class="header">
+				<div>
+					<p class="text">PROVINSI JAWA BARAT<br>KABUPATEN BEKASI</p>
+				</div>
+				
+			</div>
+			<div class="content">
+				<div class="biodata">
+					<p class="nik1">NIK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="nikAgung"></font></p>
+					<table class="table">
+						<tr>
+							<td>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="namaAgung"></font></td>
+						</tr>
+						<tr>
+							<td>Tempat/Tgl Lahir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="ttlAgung"></font></td>
+						</tr>
+						<tr>
+							<td>Jenis Kelamin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="jenisKelaminAgung"></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gol. Darah&nbsp;&nbsp;: <font id="darahAgung"></font></td>
+						</tr>
+						<tr>
+							<td>Alamat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="alamatAgung"></font></td>
+						</tr>
+						<tr>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RT/RW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="rtAgung"></font></td>
+						</tr>
+						<tr>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kel/Desa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="desaAgung"></font> </td>
+						</tr>
+						<tr>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kecamatan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="kecamatanAgung"></font> </td>
+						</tr>
+						<tr>
+							<td>Agama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ISLAM</td>
+						</tr>
+						<tr>
+							<td>Status Perkawinan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: BELUM KAWIN</td>
+						</tr>
+						<tr>
+							<td>Pekerjaan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="pekerjaanAgung"></font> </td>
+						</tr>
+						<tr>
+							<td>Kewarganegaraan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <font id="kewarganegaraanAgung"></font></td>
+						</tr>
+						<tr>
+							<td>Berlaku Hingga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: SEUMUR HIDUP</td>
+						</tr>
+					</table>
+				</div>
+				<div class="bottom">
+					<div class="foto">
+						<img src="agung.jpg">
+						
+					</div>
+					<div class="ttd">
+						<P>BEKASI</P>
+						<!-- <p>02-02-2019</p> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
